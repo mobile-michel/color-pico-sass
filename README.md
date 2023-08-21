@@ -1,4 +1,4 @@
-## Eleventy basic template with layout, 404 page & GitHub
+## Pico color palette automatically created with Sass
 1. Installation
 2. Base layout with JSON global data, header & footer includes
 3. Pico.css CDN link
