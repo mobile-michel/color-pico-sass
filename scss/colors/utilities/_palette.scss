@@ -1,0 +1,44 @@
+@use "sass:map";
+@use "../../colors";
+@use "settings";
+@use "utils";
+
+@function complementaryColor($hue) {
+    @return $hue + 180;
+  }
+  
+  @function rightAnalogousColor($hue) {
+    @return $hue + 30;
+  }
+  
+  @function leftAnalogousColor($hue) {
+    @return $hue - 30;
+  }
+  
+  $hue: 90;
+  $complement: complementaryColor($hue);
+  $rightAnalogous: rightAnalogousColor($hue);
+  $leftAnalogous: leftAnalogousColor($hue);
+
+  $primary: hsl($hue 40% 40%);
+  $primary100: hsl($hue 20% 95%);
+  $primary300: hsl($hue 20% 70%);
+  $primary500: hsl($hue 20% 50%);
+  $primary700: hsl($hue 20% 30%);
+  $primary900: hsl($hue 20% 10%);
+  $complement: hsl($complement 40% 40%);
+  $complement100: hsl($complement 20% 95%);
+  $complement300: hsl($complement 20% 70%);
+  $complement500: hsl($complement 20% 50%);
+  $complement700: hsl($complement 20% 30%);
+  $complement900: hsl($complement 20% 10%);
+  $rightAnalogous: hsl($rightAnalogous 40% 40%);
+  $rightAnalogous100: hsl($rightAnalogous 40% 90%);
+  $leftAnalogous: hsl($leftAnalogous 40% 40%);
+  $leftAnalogous100: hsl($leftAnalogous 40% 90%);
+  $grey100: hsl($hue 5% 95%);
+  $grey300: hsl($hue 5% 70%);
+  $grey500: hsl($hue 5% 50%);
+  $grey700: hsl($hue 5% 30%);
+  $grey900: hsl($hue 5% 10%);
+  

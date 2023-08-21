@@ -1,0 +1,197 @@
+@forward "settings";
+@use "index";
+
+@function complementaryColor($hue) {
+  @return $hue + 180;
+}
+
+@function rightAnalogousColor($hue) {
+  @return $hue + 30;
+}
+
+@function leftAnalogousColor($hue) {
+  @return $hue - 30;
+}
+
+$hue: 90;
+$complement: complementaryColor($hue);
+$rightAnalogous: rightAnalogousColor($hue);
+$leftAnalogous: leftAnalogousColor($hue);
+
+$colors: (
+  pure: hsl($hue 100% 50%),
+  primary: hsl($hue 40% 40%),
+  primary100: hsl($hue 20% 95%),
+  primary300: hsl($hue 20% 70%),
+  primary500: hsl($hue 20% 50%),
+  primary700: hsl($hue 20% 30%),
+  primary900: hsl($hue 20% 10%),
+  complement: hsl($complement 40% 40%),
+  complement100: hsl($complement 20% 95%),
+  complement300: hsl($complement 20% 70%),
+  complement500: hsl($complement 20% 50%),
+  complement700: hsl($complement 20% 30%),
+  complement900: hsl($complement 20% 10%),
+  rightAnalogous: hsl($rightAnalogous 40% 40%),
+  rightAnalogous100: hsl($rightAnalogous 40% 90%),
+  leftAnalogous: hsl($leftAnalogous 40% 40%),
+  leftAnalogous100: hsl($leftAnalogous 40% 90%),
+  grey100: hsl($hue 5% 95%),
+  grey300: hsl($hue 5% 70%),
+  grey500: hsl($hue 5% 50%),
+  grey700: hsl($hue 5% 30%),
+  grey900: hsl($hue 5% 10%),
+);
+
+.pure {
+  background-color: map-get($colors, pure);
+  color: map-get($colors, primary900);
+  border: 1px solid map-get($colors, accentV1);
+  padding: 0 1em;
+}
+
+.primary {
+  background-color: map-get($colors, primary);
+  color: map-get($colors, complement100);
+  border: 1px solid map-get($colors, primaryDark500);
+  padding: 0 1em;
+}
+
+.primary100 {
+  background-color: map-get($colors, primary100);
+  color: map-get($colors, complement900);
+  border: 1px solid map-get($colors, primary300);
+  padding: 0 1em;
+}
+
+.primary300 {
+  background-color: map-get($colors, primary300);
+  color: map-get($colors, complement900);
+  border: 1px solid map-get($colors, primary500);
+  padding: 0 1em;
+}
+
+.primary500 {
+  background-color: map-get($colors, primary500);
+  color: map-get($colors, complement100);
+  border: 1px solid map-get($colors, primary700);
+  padding: 0 1em;
+}
+
+.primary700 {
+  background-color: map-get($colors, primary700);
+  color: map-get($colors, complement100);
+  border: 1px solid map-get($colors, primary900);
+  padding: 0 1em;
+}
+
+.primary900 {
+  background-color: map-get($colors, primary900);
+  color: map-get($colors, complement100);
+  border: 1px solid black;
+  padding: 0 1em;
+}
+
+.complement {
+  background-color: map-get($colors, complement);
+  color: map-get($colors, primary100);
+  padding: 0 1em;
+}
+
+.complement100 {
+  background-color: map-get($colors, complement100);
+  color: map-get($colors, primary900);
+  border: 1px solid map-get($colors, complement300);
+  padding: 0 1em;
+}
+
+.complement300 {
+  background-color: map-get($colors, complement300);
+  color: map-get($colors, primary900);
+  border: 1px solid map-get($colors, complement500);
+  padding: 0 1em;
+}
+
+.complement500 {
+  background-color: map-get($colors, complement500);
+  color: map-get($colors, primary100);
+  border: 1px solid map-get($colors, complement700);
+  padding: 0 1em;
+}
+
+.complement700 {
+  background-color: map-get($colors, complement700);
+  color: map-get($colors, primary100);
+  border: 1px solid map-get($colors, complement900);
+  padding: 0 1em;
+}
+
+.complement900 {
+  background-color: map-get($colors, complement900);
+  color: map-get($colors, primary100);
+  border: 1px solid black;
+  padding: 0 1em;
+}
+
+.rightAnalogous {
+  background-color: map-get($colors, rightAnalogous);
+  color: map-get($colors, complement100);
+  border: 1px solid map-get($colors, complement900);
+  padding: 0 1em;
+}
+
+.rightAnalogous100 {
+  background-color: map-get($colors, rightAnalogous100);
+  color: map-get($colors, complement900);
+  border: 1px solid map-get($colors, complement300);
+  padding: 0 1em;
+}
+
+.leftAnalogous {
+  background-color: map-get($colors, leftAnalogous);
+  color: map-get($colors, complement100);
+  border: 1px solid map-get($colors, complement900);
+  padding: 0 1em;
+}
+
+.leftAnalogous100 {
+  background-color: map-get($colors, leftAnalogous100);
+  color: map-get($colors, complement900);
+  border: 1px solid map-get($colors, complement300);
+  padding: 0 1em;
+}
+
+.grey100 {
+  background-color: map-get($colors, grey100);
+  color: map-get($colors, primary900);
+  border: 1px solid map-get($colors, grey300);
+  padding: 0 1em;
+}
+
+.grey300 {
+  background-color: map-get($colors, grey300);
+  color: map-get($colors, primary900);
+  border: 1px solid map-get($colors, grey500);
+  padding: 0 1em;
+}
+
+.grey500 {
+  background-color: map-get($colors, grey500);
+  color: map-get($colors, primary100);
+  border: 1px solid map-get($colors, grey700);
+  padding: 0 1em;
+}
+
+.grey700 {
+  background-color: map-get($colors, grey700);
+  color: map-get($colors, primary100);
+  border: 1px solid map-get($colors, grey900);
+  padding: 0 1em;
+}
+
+.grey900 {
+  background-color: map-get($colors, grey900);
+  color: map-get($colors, primary100);
+  border: 1px solid black;
+  padding: 0 1em;
+}

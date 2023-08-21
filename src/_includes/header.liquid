@@ -1,0 +1,14 @@
+<header style="background-image: url({{ site.backgroundImage }}); background-size: cover">
+  <nav style="padding: 0 1em;">
+    <ul>
+      <li><h2><a href="/" style="color: white;">{{ site.name }}</a></h2></li>
+    </ul>
+    <ul>
+      {% for nav in collections.primary reversed %}
+        <li {% if page.url == nav.url %}aria-current="page"{% endif %}>
+          <a style="color: white;" href="{{ nav.url }}">{{ nav.data.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
